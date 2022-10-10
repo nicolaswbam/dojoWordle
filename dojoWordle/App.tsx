@@ -1,9 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Game } from "./components/Game";
-import { Keyboard } from "./components/Keyboard";
 
 export default function App() {
   return (

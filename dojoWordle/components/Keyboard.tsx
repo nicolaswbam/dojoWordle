@@ -22,22 +22,26 @@ const getKeyWidthFactor = (key: string): number => {
 };
 
 interface Props {
-  onKeyPress: (key: string) => void;
-  onEnterPress: () => void;
-  onDelPress: () => void;
+  onKeyPress?: (key: string) => void;
+  onEnterPress?: () => void;
+  onDelPress?: () => void;
 }
 
-export function Keyboard({ onKeyPress, onEnterPress, onDelPress }: Props) {
+export function WordleKeyboard({
+  onKeyPress,
+  onEnterPress,
+  onDelPress,
+}: Props) {
   const pressKey = (key: string) => {
     switch (key) {
       case "enter":
-        onEnterPress();
+        onEnterPress?.();
         return;
       case "del":
-        onDelPress();
+        onDelPress?.();
         return;
       default:
-        onKeyPress(key);
+        onKeyPress?.(key);
     }
   };
 
