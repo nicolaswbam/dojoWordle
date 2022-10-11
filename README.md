@@ -6,4 +6,4 @@ Pour initialiser le dojo
 ````
 cd dojoWordle
 yarn
-expo start
+yarn start
